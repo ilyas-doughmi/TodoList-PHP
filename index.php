@@ -42,17 +42,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 
 <body class="">
-    <div class="flex justify-center flex-col align-center items-center">
+    <div class="flex justify-center flex-col align-center items-center mt-24">
  <h1 class="text-center text-4xl font-semibold ">Task Manager</h1>
-    <form action="index.php" method="POST" class="flex flex-col">
+    <form action="index.php" method="POST" class="flex flex-col w-[30%]">
         
         <input type="text" name="task_title" required placeholder="Task Title" class="border-2 rounded-xl text-center mb-4 mt-5 h-[40px]">
 
         <textarea name="task_description" required class="border-2 rounded-[12px] h-[80px] mb-2 text-center" placeholder="Task Description"></textarea>
 
         <button type="submit" class="border-2 rounded-[12px] h-[6vh]  w-[80%] self-center bg-black text-white text hover:scale[0.9px]">Add Task</button>
-        
-        <div class="border-2 border-black mt-12">
+    </form>
+        <div class="border-2 border-black mt-12 p-24 rounded-xl text-[30px] font-semibold uppercase">
      <?php
 
         $get_data = "SELECT * FROM task";
@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ?>
         </div>
    
-    </form>
+    
     </div>
    
 </body>
